@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B58E5321D636D7A00C52799 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B58E5311D636D7A00C52799 /* main.cpp */; };
+		2B58E53C1D6370E900C52799 /* libboost_system-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58E53B1D6370E900C52799 /* libboost_system-mt.a */; };
+		2B58E53E1D63710500C52799 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58E53D1D63710500C52799 /* libboost_thread-mt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		2B58E52E1D636D7A00C52799 /* dns_cache */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dns_cache; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B58E5311D636D7A00C52799 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2B58E5391D6370B900C52799 /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_thread-mt.dylib"; path = "../../../../usr/local/Cellar/boost/1.59.0/lib/libboost_thread-mt.dylib"; sourceTree = "<group>"; };
+		2B58E53B1D6370E900C52799 /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_system-mt.a"; path = "../../../../usr/local/Cellar/boost/1.59.0/lib/libboost_system-mt.a"; sourceTree = "<group>"; };
+		2B58E53D1D63710500C52799 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../../../usr/local/Cellar/boost/1.59.0/lib/libboost_thread-mt.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B58E53E1D63710500C52799 /* libboost_thread-mt.a in Frameworks */,
+				2B58E53C1D6370E900C52799 /* libboost_system-mt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +48,9 @@
 		2B58E5251D636D7A00C52799 = {
 			isa = PBXGroup;
 			children = (
+				2B58E53D1D63710500C52799 /* libboost_thread-mt.a */,
+				2B58E53B1D6370E900C52799 /* libboost_system-mt.a */,
+				2B58E5391D6370B900C52799 /* libboost_thread-mt.dylib */,
 				2B58E5301D636D7A00C52799 /* dns_cache */,
 				2B58E52F1D636D7A00C52799 /* Products */,
 			);
@@ -209,6 +219,9 @@
 		2B58E5361D636D7A00C52799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.59.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.59.0/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +229,9 @@
 		2B58E5371D636D7A00C52799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.59.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.59.0/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
